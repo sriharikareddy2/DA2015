@@ -10,41 +10,27 @@ int main()
     A=(int *)malloc(n*sizeof(int));
     for(i=0;i<n;i++)
     scanf("%d",&A[i]);
+    sum=A[0];
     i=0;
     for(j=0;j<n;j++)
     {
-        
+        while(sum>t&&(i<j-1))
+        {
+            sum=sum-A[i];
+            i++;
+        }
         if(sum==t)
         {
             j--;
             flag=1;
             break;
         }
-        else if(sum>t)
-        {
-            sum=sum-A[i];
-            j--;
-            if(sum==t)
-        {
-            i++;
-            flag=1;
-            break;
-        }
-        i++;
-        
-            
-        }
-        else
+        if(i<n)
         {
             sum+=A[j];
-             if(ss==s)
-            {
-                //i--;
-                flag=1;
-                break;
-            }
         }
-    }
+        
+            }
     if(flag)
     {
         printf("\n+++ Subarray found...");
