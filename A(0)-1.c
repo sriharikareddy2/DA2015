@@ -16,6 +16,7 @@ int main()
         
         if(sum==t)
         {
+            j--;
             flag=1;
             break;
         }
