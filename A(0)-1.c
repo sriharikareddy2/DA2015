@@ -35,8 +35,15 @@ int main()
             
         }
         else
+        {
             sum+=A[j];
-        
+             if(ss==s)
+            {
+                //i--;
+                flag=1;
+                break;
+            }
+        }
     }
     if(flag)
     {
